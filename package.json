@@ -1,0 +1,102 @@
+{
+  "name": "@arckit/form",
+  "version": "1.0.0",
+  "description": "TanStack Form integration with DaisyUI field components and form utilities",
+  "packageManager": "pnpm@10.33.0",
+  "license": "MIT",
+  "author": "Marc Gavanier <marc@gavanier.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arckit-dev/form.git"
+  },
+  "homepage": "https://github.com/arckit-dev/form#readme",
+  "bugs": {
+    "url": "https://github.com/arckit-dev/form/issues"
+  },
+  "keywords": ["arckit", "form", "tanstack-form", "react", "daisyui"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint:code": "biome check --write",
+    "lint:code:ci": "biome ci",
+    "lint:commit": "commitlint --from origin/main",
+    "lint:unused": "knip",
+    "check:publint": "publint",
+    "check:attw": "attw --pack .",
+    "check:size": "size-limit",
+    "release": "semantic-release",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "@arckit/daisyui": ">=1",
+    "@tanstack/react-form": ">=1",
+    "effect": ">=3",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "effect": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@arckit/daisyui": "^1.0.0",
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@biomejs/biome": "^2.4.0",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/exec": "^7.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@size-limit/file": "^11.0.0",
+    "@tanstack/react-form": "^1.0.0",
+    "@types/react": "^19.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "effect": "^3.0.0",
+    "husky": "^9.0.0",
+    "jsdom": "^26.0.0",
+    "knip": "^5.0.0",
+    "lint-staged": "^16.0.0",
+    "publint": "^0.3.0",
+    "react": "^19.0.0",
+    "semantic-release": "^24.0.0",
+    "size-limit": "^11.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "limit": "10 kB"
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
