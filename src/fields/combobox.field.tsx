@@ -1,4 +1,4 @@
-import { ComboBox as ComboBoxBase, type ComboBoxProps as ComboBoxBaseProps } from '@arckit/daisyui/primitives';
+import { ComboBox as ComboBoxBase, type ComboBoxProps as ComboBoxBaseProps } from '@arckit/daisyui/primitives-client';
 import type { KeyboardEvent } from 'react';
 import { useFieldContext } from '../form-context';
 
