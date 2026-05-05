@@ -5,4 +5,5 @@ export * from './form';
 export * from './form-context';
 export * from './handle-action';
 export * from './handle-submit';
+export * from './transform-value';
 export * from './use-app-form';
