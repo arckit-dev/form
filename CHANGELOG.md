@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/arckit-dev/form/compare/v1.0.1...v1.1.0) (2026-05-05)
+
+
+### Features
+
+* add transformValue composition helper ([e777800](https://github.com/arckit-dev/form/commit/e777800ded48f1a0a2a2075724e03a62d96a08ff))
+
 ## [1.0.1](https://github.com/arckit-dev/form/compare/v1.0.0...v1.0.1) (2026-04-24)
 
 
