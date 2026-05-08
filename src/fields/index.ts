@@ -4,5 +4,6 @@ export * from './counter.field';
 export * from './error-message.field';
 export * from './input.field';
 export * from './label.field';
+export * from './select.field';
 export * from './selected-items.field';
 export * from './textarea.field';
