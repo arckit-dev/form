@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/arckit-dev/form/compare/v1.1.0...v1.2.0) (2026-05-08)
+
+
+### Features
+
+* add formSubmitted parameter to hasError ([2d2843f](https://github.com/arckit-dev/form/commit/2d2843f08ac6cb0938173a253bf16dcc5f4aaac5))
+* add isInvalid and onValueChange to Checkbox field ([8f426bd](https://github.com/arckit-dev/form/commit/8f426bde3baa63481f9ef540050424c1c0b18880))
+* add Select field component ([72fd4c6](https://github.com/arckit-dev/form/commit/72fd4c6e7822f8f62f0e89a81541be38f09f9ce4))
+
 # [1.1.0](https://github.com/arckit-dev/form/compare/v1.0.1...v1.1.0) (2026-05-05)
 
 
