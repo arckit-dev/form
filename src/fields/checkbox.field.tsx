@@ -5,22 +5,35 @@ import { Label } from './label.field';
 
 type CheckboxProps = Omit<CheckboxBaseProps, 'name' | 'type'> & {
   isPending: boolean;
+  isInvalid?: boolean;
+  onValueChange?: (checked: boolean) => void;
 };
 
-export const Checkbox = ({ isPending, children, className = 'flex items-center gap-x-1.5', ...props }: CheckboxProps) => {
+export const Checkbox = ({
+  isPending,
+  isInvalid,
+  onValueChange,
+  children,
+  className = 'flex items-center gap-x-1.5',
+  ...props
+}: CheckboxProps) => {
   const { name, state, handleBlur, handleChange } = useFieldContext<boolean>();
+  const showError = isInvalid || hasError(state);
 
   return (
     <Label className={className}>
       <CheckboxBase
         id={name}
         name={name}
-        value={state.value ? 'true' : 'false'}
+        checked={state.value}
         disabled={isPending ?? props.disabled}
         onBlur={handleBlur}
-        onChange={(e) => handleChange(e.target.value === 'false')}
-        color={hasError(state) ? 'checkbox-error' : 'checkbox-primary'}
-        className={state.meta.errors.length === 0 ? 'not-checked:border-base-500' : undefined}
+        onChange={(e) => {
+          handleChange(e.target.checked);
+          onValueChange?.(e.target.checked);
+        }}
+        color={showError ? 'checkbox-error' : 'checkbox-primary'}
+        className={showError ? undefined : 'not-checked:border-base-500'}
         {...props}
       />
       {children}
