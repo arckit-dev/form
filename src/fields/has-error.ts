@@ -1,5 +1,6 @@
 export const hasError = ({
-  meta: { isTouched, isPristine, isBlurred, isValid }
+  meta: { isTouched, isPristine, isBlurred, isValid },
+  formSubmitted = false
 }: {
   meta: {
     isTouched: boolean;
@@ -7,4 +8,5 @@ export const hasError = ({
     isBlurred: boolean;
     isValid: boolean;
   };
-}) => !isValid && ((isTouched && isPristine) || isBlurred);
+  formSubmitted?: boolean;
+}) => !isValid && (formSubmitted || (isTouched && isPristine) || isBlurred);
