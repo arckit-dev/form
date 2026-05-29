@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/arckit-dev/form/compare/v1.2.0...v1.3.0) (2026-05-29)
+
+
+### Features
+
+* add CheckboxGroup field, Label required/suffix and ErrorMessage icon ([dbad72d](https://github.com/arckit-dev/form/commit/dbad72de05146967fb812b8acb05681124464995))
+
 # [1.2.0](https://github.com/arckit-dev/form/compare/v1.1.0...v1.2.0) (2026-05-08)
 
 
