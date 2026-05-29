@@ -1,3 +1,4 @@
+import { cn } from '@arckit/daisyui/utils';
 import type { ReactNode } from 'react';
 import { useFieldContext } from '../form-context';
 import { hasError } from './has-error';
@@ -8,11 +9,13 @@ export const ErrorMessage = ({
   errors: errorsProp = [],
   formatMessage,
   template,
+  icon,
   className = 'text-error mt-1 text-xs'
 }: {
   errors?: Error[];
   formatMessage?: (key: never) => string;
   template?: (field: string, message: string) => string;
+  icon?: ReactNode;
   className?: string;
 }): ReactNode => {
   const { name, state } = useFieldContext<string>();
@@ -24,11 +27,17 @@ export const ErrorMessage = ({
 
   return hasError(state) || errorsProp.length > 0 ? (
     hasExactlyOne(errors) ? (
-      <p className={className}>{format(errors[0].message)}</p>
+      <p className={cn(className, icon && 'flex items-center gap-1')}>
+        {icon}
+        {format(errors[0].message)}
+      </p>
     ) : (
       <ul className={className}>
         {errors.map(({ message }) => (
-          <li key={message}>{format(message)}</li>
+          <li key={message} className={cn(icon && 'flex items-center gap-1')}>
+            {icon}
+            {format(message)}
+          </li>
         ))}
       </ul>
     )
