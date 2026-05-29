@@ -10,6 +10,7 @@ const Label = lazy(() => import('./fields/label.field').then((module) => ({ defa
 const ErrorMessage = lazy(() => import('./fields/error-message.field').then((module) => ({ default: module.ErrorMessage })));
 const Counter = lazy(() => import('./fields/counter.field').then((module) => ({ default: module.Counter })));
 const Checkbox = lazy(() => import('./fields/checkbox.field').then((module) => ({ default: module.Checkbox })));
+const CheckboxGroup = lazy(() => import('./fields/checkbox-group.field').then((module) => ({ default: module.CheckboxGroup })));
 const Select = lazy(() => import('./fields/select.field').then((module) => ({ default: module.Select })));
 const Combobox = lazy(() => import('./fields/combobox.field').then((module) => ({ default: module.ComboBox }))) as <
   TItem,
@@ -34,6 +35,7 @@ export const { useAppForm } = createFormHook({
     Error: ErrorMessage,
     Counter,
     Checkbox,
+    CheckboxGroup,
     Combobox,
     SelectedItems
   },

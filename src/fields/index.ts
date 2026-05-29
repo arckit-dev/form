@@ -1,4 +1,5 @@
 export * from './checkbox.field';
+export * from './checkbox-group.field';
 export * from './combobox.field';
 export * from './counter.field';
 export * from './error-message.field';
