@@ -1,17 +1,17 @@
 import { createFormHook } from '@tanstack/react-form';
 import { lazy, type ReactNode } from 'react';
+import { Checkbox } from './fields/checkbox.field';
+import { CheckboxGroup } from './fields/checkbox-group.field';
 import type { ComboBoxProps } from './fields/combobox.field';
+import { Counter } from './fields/counter.field';
+import { ErrorMessage } from './fields/error-message.field';
+import { Input } from './fields/input.field';
+import { Label } from './fields/label.field';
+import { Select } from './fields/select.field';
 import type { SelectedItemProps } from './fields/selected-items.field';
+import { Textarea } from './fields/textarea.field';
 import { fieldContext, formContext } from './form-context';
 
-const Input = lazy(() => import('./fields/input.field').then((module) => ({ default: module.Input })));
-const Textarea = lazy(() => import('./fields/textarea.field').then((module) => ({ default: module.Textarea })));
-const Label = lazy(() => import('./fields/label.field').then((module) => ({ default: module.Label })));
-const ErrorMessage = lazy(() => import('./fields/error-message.field').then((module) => ({ default: module.ErrorMessage })));
-const Counter = lazy(() => import('./fields/counter.field').then((module) => ({ default: module.Counter })));
-const Checkbox = lazy(() => import('./fields/checkbox.field').then((module) => ({ default: module.Checkbox })));
-const CheckboxGroup = lazy(() => import('./fields/checkbox-group.field').then((module) => ({ default: module.CheckboxGroup })));
-const Select = lazy(() => import('./fields/select.field').then((module) => ({ default: module.Select })));
 const Combobox = lazy(() => import('./fields/combobox.field').then((module) => ({ default: module.ComboBox }))) as <
   TItem,
   TPayload extends object
