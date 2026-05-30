@@ -25,6 +25,16 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
+    },
+    "./effect-schema": {
+      "import": {
+        "types": "./dist/apply-effect-schema.d.ts",
+        "default": "./dist/apply-effect-schema.js"
+      },
+      "require": {
+        "types": "./dist/apply-effect-schema.d.cts",
+        "default": "./dist/apply-effect-schema.cjs"
+      }
     }
   },
   "main": "./dist/index.cjs",
