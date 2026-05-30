@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/arckit-dev/form/compare/v1.3.0...v2.0.0) (2026-05-30)
+
+
+* feat!: move applyEffectSchema to @arckit/form/effect-schema subpath ([4ebddb7](https://github.com/arckit-dev/form/commit/4ebddb786250e0e3f7d79678091b20c8a9c66f21))
+
+
+### Bug Fixes
+
+* add typesVersions fallback for effect-schema subpath (node10) ([e0d7b62](https://github.com/arckit-dev/form/commit/e0d7b6298df08bd9b45c163025f73e5d329c8a23))
+
+
+### BREAKING CHANGES
+
+* applyEffectSchema is no longer exported from @arckit/form.
+Import it from @arckit/form/effect-schema instead.
+
 # [1.3.0](https://github.com/arckit-dev/form/compare/v1.2.0...v1.3.0) (2026-05-29)
 
 
